@@ -1,7 +1,7 @@
-import cart from "../../assets/cart.png";
-import './cartWidget.css';
+import cart from "../../../src/assets/cart.png"
+import './Cartwidget.css';
 
-export default function cartWidget (){
+export default function Cartwidget (){
    return (
       <div className="cartCounter">
          <img id="cart" src={cart} alt="carrito" />
