@@ -1,0 +1,15 @@
+#cart {
+    height: 11vh;
+    margin-top: 0; 
+}
+
+.cartCounter {
+    position: absolute;
+    z-index: 2;
+    margin-top: 1%;
+    margin-left: 65%;  
+}
+.cartCounter span {
+    color: black;
+    margin-left: 23px;
+}
