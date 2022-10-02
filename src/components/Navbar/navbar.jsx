@@ -1,16 +1,16 @@
 import logo from "../../assets/logo.png";
 import './navbar.css';
-import '../cartWidget/cartWidget'
-import cartWidget from "../cartWidget/cartWidget";
+import '../CartWidget/Cartwidget'
+import Cartwidget from "../CartWidget/Cartwidget";
 
 
 export default function Navbar(){
-    return (
+    return(
       <div className="App">
         <header className="App-header">
         <img id="logo" src={logo} alt="logo" />  
           <nav className="navegador">
-            <span><cartWidget/></span>        
+            <span><Cartwidget/></span>        
               <ul id="lista">
                 <button>Aceites</button>
                 <button>Filtros de Aceite</button>
