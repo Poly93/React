@@ -7,11 +7,11 @@ import Cartwidget from "../Cartwidget/Cartwidget";
 export default function Navbar(){
     return(
       <div className="App">
-        <header className="App-header">
+        <header>
         <img id="logo" src={logo} alt="logo" />  
           <nav className="navegador">
-            <span><Cartwidget/></span>        
               <ul id="lista">
+                <button><Cartwidget/></button>
                 <button>Aceites</button>
                 <button>Filtros de Aceite</button>
                 <button>Filtro de Aire</button> 

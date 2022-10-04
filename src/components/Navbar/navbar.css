@@ -1,6 +1,6 @@
 .navegador{
     background-color: white;
-    height: 11vh;
+    height: 20vh;
     margin-top: 0;
 }
 
@@ -10,12 +10,10 @@
 }
 
 #lista button {
-    margin: 20px;
-    border-radius: 5px;
-}
-
-#lista li{
-    color: gray;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    background-color: aquamarine;
 }
 
 #logo {

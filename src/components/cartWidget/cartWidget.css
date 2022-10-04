@@ -1,14 +1,3 @@
 #cart {
     height: 4vh;
 }
-
-.cartCounter {
-    position: absolute;
-    z-index: 2;
-    margin-top: 1%;
-    margin-left: 80%;  
-}
-.cartCounter span {
-    color: black;
-    margin-left: 21px;
-}
