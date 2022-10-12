@@ -10,12 +10,10 @@
 }
 
 #lista button {
-    margin: 20px;
-    border-radius: 5px;
-}
-
-#lista li{
-    color: gray;
+    margin: 10px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    background-color: rgba(0, 0, 0, 0.147);
 }
 
 #logo {
