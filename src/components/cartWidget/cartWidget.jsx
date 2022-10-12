@@ -1,5 +1,5 @@
 import cart from "../../../src/assets/cart.png"
-import './Cartwidget.css';
+import './cartWidget.css';
 
 export default function Cartwidget (){
    return (

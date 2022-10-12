@@ -1,7 +1,7 @@
 import logo from "../../assets/logo.png";
 import './navbar.css';
-import '../Cartwidget/Cartwidget'
-import Cartwidget from "../Cartwidget/Cartwidget";
+import '../Cartwidget/cartWidget'
+import Cartwidget from "../Cartwidget/cartWidget";
 
 
 export default function Navbar(){
