@@ -2,3 +2,16 @@ h1{
     font-size: 70px;
     margin-left: 30%;
 }
+
+.tituloP{
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 4%;
+}
+
+.spinner{
+    margin-left:46%;
+    margin-top:13%;
+}

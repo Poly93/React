@@ -1,12 +1,14 @@
 import cart from "../../../src/assets/cart.png"
 import './cartWidget.css';
 
-export default function Cartwidget (){
+function Cartwidget (){
    return (
       <div>
          <img id="cart" src={cart} alt="carrito" />
-         <br />
+            <br />
          <span>0</span>
-         </div>
+      </div>
    );
 }
+
+export default Cartwidget;
