@@ -11,10 +11,10 @@ export default function Navbar(){
         <img id="logo" src={logo} alt="logo" />  
           <nav className="navegador">        
               <ul id="lista">
-                <button className="btn btn-outline-secondary"><Cartwidget/></button>
                 <button className="btn btn-outline-secondary">Aceites</button>
                 <button className="btn btn-outline-secondary">Filtros de Aceite</button>
-                <button className="btn btn-outline-secondary">Filtro de Aire</button> 
+                <button className="btn btn-outline-secondary">Filtro de Aire</button>
+                <button className="btn btn-outline-secondary"><Cartwidget/></button> 
               </ul>
           </nav>
         </header>  
