@@ -6,15 +6,15 @@ import Cartwidget from "../Cartwidget/cartWidget";
 
 export default function Navbar(){
     return(
-      <div className="App">
+      <div>
         <header>
         <img id="logo" src={logo} alt="logo" />  
           <nav className="navegador">        
               <ul id="lista">
-                <button><Cartwidget/></button>
-                <button>Aceites</button>
-                <button>Filtros de Aceite</button>
-                <button>Filtro de Aire</button> 
+                <button className="btn btn-outline-secondary"><Cartwidget/></button>
+                <button className="btn btn-outline-secondary">Aceites</button>
+                <button className="btn btn-outline-secondary">Filtros de Aceite</button>
+                <button className="btn btn-outline-secondary">Filtro de Aire</button> 
               </ul>
           </nav>
         </header>  
