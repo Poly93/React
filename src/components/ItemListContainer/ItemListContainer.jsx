@@ -13,24 +13,24 @@ const ItemListContainer = ({ greeting }) => {
     
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const { categoryId } = useParams()
+    const { category } = useParams()
     
         useEffect(() => {
             setLoading(true)
-            const asyncFunction = categoryId ? getProductsByCategory : getProducts
-            asyncFunction(categoryId).then(response => {
+            const asyncFunction = category ? getProductsByCategory : getProducts
+            asyncFunction(category).then(response => {
                 setProducts(response)
             }).catch(error => {
                 console.log(error)
             }).finally(() => {
                 setLoading(false)
             })
-        }, [categoryId])
+        }, [category])
 
     if (loading) {
         return (
             <div className='spinner'>
-                <SpinnerDotted size={50} thickness={79} speed={100} color="rgba(245, 82, 57, 1)" />
+                <SpinnerDotted size={100} thickness={79} speed={100} color="rgba(245, 82, 57, 1)" />
             </div>)
     }
     return (

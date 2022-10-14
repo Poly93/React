@@ -88,7 +88,78 @@ const products = [
         descripcion:"Productos Motul",
         category : "Productos",
         stock: "10"
-    }
+    },
+    {
+        id: "11",
+        titulo: "Petronas",
+        precio: "3.000",
+        img: "/images/Petronas.png",
+        descripcion:"Productos Petronas",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "12",
+        titulo: "Pirelli",
+        precio: "3.000",
+        img: "/images/Pirelli.png",
+        descripcion:"Productos Pirelli",
+        category : "Productos",
+        stock: "10"
+    },{
+        id: "13",
+        titulo: "Shell",
+        precio: "3.000",
+        img: "/images/Shell.png",
+        descripcion:"Productos Shell",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "14",
+        titulo: "Total",
+        precio: "3.000",
+        img: "/images/Total.png",
+        descripcion:"Productos Total",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "15",
+        titulo: "Valvoline",
+        precio: "3.000",
+        img: "/images/Valvoline.png",
+        descripcion:"Productos Valvoline",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "16",
+        titulo: "Wagner",
+        precio: "3.000",
+        img: "/images/Wagner.png",
+        descripcion:"Productos Wagner",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "17",
+        titulo: "Wynns",
+        precio: "3.000",
+        img: "/images/Wynns.png",
+        descripcion:"Productos Wynns",
+        category : "Productos",
+        stock: "10"
+    },
+    {
+        id: "18",
+        titulo: "Ypf",
+        precio: "3.000",
+        img: "/images/Ypf.png",
+        descripcion:"Productos Ypf",
+        category : "Productos",
+        stock: "10"
+    },
 ]
 
 export const getProducts = () => {
@@ -106,10 +177,10 @@ export const getProductById = (id) => {
     })
 }
 
-export const getProductsByCategory = (categoryId) => {
+export const getProductsByCategory = (category) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products.filter(prod => prod.category === categoryId))
+            resolve(products.filter(prod => prod.category === category))
         }, 500)
     })
 }
