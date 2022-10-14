@@ -2,7 +2,7 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 
-const ItemDetail = ({ id, titulo, precio, img, descripcion, category }) => {
+const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) => {
 
     const productToAdd = {id, precio, category}
     console.log(productToAdd)
@@ -19,6 +19,7 @@ const ItemDetail = ({ id, titulo, precio, img, descripcion, category }) => {
               <h2 id='titulo'>{titulo}</h2>
                 <p>$ {precio}</p>
                 <p id='descripcion'>{descripcion}</p>
+                <p id='stock'>Stock: {stock} unidades</p>
               <ItemCount onAdd={handleOnAdd}/>
             </div>
         </div>

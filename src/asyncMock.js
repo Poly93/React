@@ -6,7 +6,7 @@ const products = [
         img: "/images/3m.png",
         descripcion:"Productos 3m",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "2",
@@ -15,7 +15,7 @@ const products = [
         img: "/images/bardahl.png",
         descripcion:"Productos Bardahl",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "3",
@@ -24,7 +24,7 @@ const products = [
         img: "/images/Bosch.png",
         descripcion:"Productos Bosch",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "4",
@@ -33,7 +33,7 @@ const products = [
         img: "/images/Castrol.png",
         descripcion:"Productos Castrol",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "5",
@@ -42,7 +42,7 @@ const products = [
         img: "/images/Elf.png",
         descripcion:"Productos Elf",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "6",
@@ -51,7 +51,7 @@ const products = [
         img: "/images/Gulf.png",
         descripcion:"Productos Gulf",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "7",
@@ -60,7 +60,7 @@ const products = [
         img: "/images/Ipone.png",
         descripcion:"Productos Ipone",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "8",
@@ -69,7 +69,7 @@ const products = [
         img: "/images/Liquimoly.png",
         descripcion:"Productos Liquimoly",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "9",
@@ -77,8 +77,8 @@ const products = [
         precio: "3.000",
         img: "/images/Mobil.png",
         descripcion:"Productos Mobil",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
     {
         id: "10",
@@ -86,8 +86,8 @@ const products = [
         precio: "3.000",
         img: "/images/Motul.png",
         descripcion:"Productos Motul",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
     {
         id: "11",
@@ -96,7 +96,7 @@ const products = [
         img: "/images/Petronas.png",
         descripcion:"Productos Petronas",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "12",
@@ -105,15 +105,15 @@ const products = [
         img: "/images/Pirelli.png",
         descripcion:"Productos Pirelli",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },{
         id: "13",
         titulo: "Shell",
         precio: "3.000",
         img: "/images/Shell.png",
         descripcion:"Productos Shell",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
     {
         id: "14",
@@ -121,8 +121,8 @@ const products = [
         precio: "3.000",
         img: "/images/Total.png",
         descripcion:"Productos Total",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
     {
         id: "15",
@@ -130,8 +130,8 @@ const products = [
         precio: "3.000",
         img: "/images/Valvoline.png",
         descripcion:"Productos Valvoline",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
     {
         id: "16",
@@ -140,7 +140,7 @@ const products = [
         img: "/images/Wagner.png",
         descripcion:"Productos Wagner",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "17",
@@ -149,7 +149,7 @@ const products = [
         img: "/images/Wynns.png",
         descripcion:"Productos Wynns",
         category : "Productos",
-        stock: "10"
+        stock: 10
     },
     {
         id: "18",
@@ -157,8 +157,8 @@ const products = [
         precio: "3.000",
         img: "/images/Ypf.png",
         descripcion:"Productos Ypf",
-        category : "Productos",
-        stock: "10"
+        category : "Servicios",
+        stock: 10
     },
 ]
 

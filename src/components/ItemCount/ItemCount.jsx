@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './ItemCount.css';
 
 
+
 let stock = 10;
 
 function ItemCount ({onAdd}) {
