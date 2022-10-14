@@ -6,5 +6,8 @@
 }
 
 #numero {
+    text-align: center;
     margin-top: 2%;
+    font-size: 1rem;
+    font-weight: 600;
 }

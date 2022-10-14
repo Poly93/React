@@ -1,12 +1,13 @@
-import { useSate } from 'react';
-import './ItemCount.css'
+import React from 'react';
+import { useState } from 'react';
+import './ItemCount.css';
 
 
 let stock = 10;
 
 function ItemCount ({onAdd}) {
     
-    const [quantity, setQuantity] = useSate(0);
+    const [quantity, setQuantity] = useState(0);
     
     const increase = () => {
         if (quantity < stock) {
@@ -19,7 +20,7 @@ function ItemCount ({onAdd}) {
         }
     }
     const empty = () => {
-        setQuantity(quantity === 0)
+        setQuantity(quantity === 0);
     }
 
     return (

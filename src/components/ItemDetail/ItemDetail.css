@@ -1,14 +1,30 @@
-#detalle {
-    height: 38rem;
-    width: 25rem;
-    margin: auto;
-    border-radius: 20px;
-    color: white;
-    text-align: justify;
-    background: rgb(121,121,121);
-    background: radial-gradient(circle, rgba(121,121,121,1) 10%, rgba(18,18,18,1) 80%);
+.card__brand2{
+    margin: 10% auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #2c3e5050;
 }
 
-#fotitod{
+#brand{
+    margin: 0 auto;
+    max-width: 80%;
     border-radius: 20px;
+}
+
+.btnGridPos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#descripcion{
+    font-size: 1rem;
+}
+
+#titulo{
+    font-size: 3rem;
 }

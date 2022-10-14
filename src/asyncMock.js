@@ -11,7 +11,7 @@ const products = [
     {
         id: "2",
         titulo: "Bardahl",
-        precio: "3.000",
+        precio: "4.000",
         img: "/images/bardahl.png",
         descripcion:"Productos Bardahl",
         category : "Productos",
@@ -106,10 +106,10 @@ export const getProductById = (id) => {
     })
 }
 
-export const getProductsByCategory = (category) => {
+export const getProductsByCategory = (categoryId) => {
     return new Promise (resolve => {
         setTimeout(() => {
-            resolve(products.filter(prod => prod.category ===category))
+            resolve(products.filter(prod => prod.category === categoryId))
         }, 500)
     })
 }

@@ -12,13 +12,13 @@ const ItemDetail = ({ id, titulo, precio, img, descripcion, category }) => {
           }
 
     return (
-      <div>
-        <div id="detalle" className="card">
-          <img id='fotitod' src={img} alt='fotito'/> 
-            <div className="card-body">
-              <h2 className="card-title">{titulo}</h2>
-                <p className="card-text">{precio}</p>
-                <p className="card-text">{descripcion}</p>
+      <div className="grilla__lubricentro">
+        <div id="detalle" className="card__brand2">
+          <img id='brand' src={img} alt='fotito'/> 
+            <div className="btnGridPos">
+              <h2 id='titulo'>{titulo}</h2>
+                <p>$ {precio}</p>
+                <p id='descripcion'>{descripcion}</p>
               <ItemCount onAdd={handleOnAdd}/>
             </div>
         </div>

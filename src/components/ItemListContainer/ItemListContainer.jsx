@@ -13,18 +13,19 @@ const ItemListContainer = ({ greeting }) => {
     
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const { category } = useParams()
+    const { categoryId } = useParams()
+    
         useEffect(() => {
             setLoading(true)
-            const asyncFunction = category ? getProductsByCategory : getProducts
-            asyncFunction(category).then(response => {
+            const asyncFunction = categoryId ? getProductsByCategory : getProducts
+            asyncFunction(categoryId).then(response => {
                 setProducts(response)
             }).catch(error => {
                 console.log(error)
             }).finally(() => {
                 setLoading(false)
             })
-        }, [category])
+        }, [categoryId])
 
     if (loading) {
         return (
@@ -34,7 +35,7 @@ const ItemListContainer = ({ greeting }) => {
     }
     return (
         <div>
-            <h1 className='tituloP'>{greeting}</h1>
+            <h1 className='titulo'>{greeting}</h1>
             <div>
                 <ItemList products={products} />
             </div>

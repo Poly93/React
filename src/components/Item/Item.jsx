@@ -3,16 +3,17 @@ import "./Item.css";
 import { Link } from 'react-router-dom';
 
 const Item = ({ titulo, precio, imagen, id}) => {
-    return (   
-        <div id='card' className="card"  key={id}>
-            <img id='img' src={imagen} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h2 className="card-title">{titulo}</h2>
-                    <p className="card-text">$ {precio}</p>
-                    <Link  to={`/detail/${id}`} id='botonc' className="btn btn-dark">Ver mas</Link>
+    return (
+        <div className="grilla__lubricentro">   
+        <div id="card" className="card__brand" key={id}>
+            <img id='img' src={imagen} alt="..."/>
+                <div className="btnGridPos">
+                    <h2 id="h2">{titulo}</h2>
+                    <p>$ {precio}</p>
+                    <Link  to={`/detail/${id}`} id='botonc' className="btn btn-dark">Ver detalles</Link>
                 </div>
         </div>
-        
+        </div>
     )
 }
 
