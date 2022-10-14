@@ -7,6 +7,21 @@
     border-radius: 30px;
     background-color: #2c3e5050;
 }
+.card__brand3{
+    padding-top: 5px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #2c3e5030;
+}
+.card__brand3:hover{
+    cursor: pointer;
+    background-color:#2c3e5080 ;
+    color: white;
+    transition: ease-in-out 1s;
+
+}
 
 #brand{
     margin: 0 auto;
@@ -22,6 +37,7 @@
 }
 
 #descripcion{
+    margin-top: 5px;
     font-size: 1rem;
 }
 
@@ -32,4 +48,14 @@
 #stock{
     font-size: 0.8em;
     color: white;
+}
+
+.links{
+    color: black;
+    text-decoration: none;
+}
+.links:hover{
+    cursor: pointer;
+    color: white;
+    transition: ease-in-out 1s;
 }

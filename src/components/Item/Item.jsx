@@ -10,7 +10,7 @@ const Item = ({ titulo, precio, imagen, id}) => {
                 <div className="btnGridPos">
                     <h2 id="h2">{titulo}</h2>
                     <p>$ {precio}</p>
-                    <Link  to={`/detail/${id}`} id='botonc' className="btn btn-dark">Ver detalles</Link>
+                    <Link  to={`/details/${id}`} id='botonc' className="btn btn-dark">Ver detalles</Link>
                 </div>
         </div>
         </div>
