@@ -8,17 +8,18 @@ import { Link } from 'react-router-dom';
 function Navbar(){
     return(
       <div>
-        <header>
-        <Link to={'/'} ><img id="logo" src={logo} alt="logo" /></Link>  
+        <header className="banner_logo">
+        <Link to={'/'} ><img src={logo} alt="logo" /></Link>
+        </header>    
           <nav className="navegador">        
               <ul id="lista">
-                <Link to={'/category/Productos'}><button className="btn btn-outline-secondary">Productos</button></Link>
-                <Link to={'/category/Servicios'}><button className="btn btn-outline-secondary">Servicios</button></Link>
-                <Link to={'/category/'}><button className="btn btn-outline-secondary">Contacto</button></Link>
-                <button className="btn btn-outline-secondary"><Cartwidget/></button> 
+                <Link to={'/category/Productos'}><button id='btnNavbar' className="btn btn-outline-secondary ">Productos</button></Link>
+                <Link to={'/category/Servicios'}><button id='btnNavbar' className="btn btn-outline-secondary">Servicios</button></Link>
+                <Link to={'/contact/'}><button id='btnNavbar' className="btn btn-outline-secondary">Contacto</button></Link>
+                <button id='btnNavbar' className="btn btn-outline-secondary"><Cartwidget/></button> 
               </ul>
           </nav>
-        </header>  
+        
       </div>
     );
 }

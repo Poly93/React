@@ -5,8 +5,7 @@ function Cartwidget (){
    return (
       <div>
          <img id="cart" src={cart} alt="carrito" />
-            <br />
-         <span>0</span>
+         <span> 10</span>
       </div>
    );
 }

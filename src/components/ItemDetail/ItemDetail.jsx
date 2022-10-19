@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) => {
 
-    const productToAdd = {id, precio, category}
-    console.log(productToAdd)
     
-    const handleOnAdd = () => {
-        console.log('se agrego al carrito')    
+    const handleOnAdd = (quantity) => {
+      const productToAdd = {id, precio, category, quantity}
+        console.log(productToAdd)
           }
 
     return (
@@ -20,7 +19,7 @@ const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) =
                 <p>$ {precio}</p>
                 <p id='descripcion'>{descripcion}</p>
                 <p id='stock'>Stock: {stock} unidades</p>
-              <ItemCount onAdd={handleOnAdd}/>
+              <ItemCount onAdd={handleOnAdd} stock={stock}/>
               <div className="card__brand3">
               <Link className='links' to={'/'} ><p id='descripcion'>Volver</p></Link>
               </div>

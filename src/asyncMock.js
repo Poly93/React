@@ -24,7 +24,7 @@ const products = [
         img: "/images/Bosch.png",
         descripcion:"Productos Bosch",
         category : "Productos",
-        stock: 10
+        stock: 4
     },
     {
         id: "4",
@@ -144,7 +144,7 @@ const products = [
     },
     {
         id: "17",
-        titulo: "Wynns",
+        titulo: "Wynn's",
         precio: "3.000",
         img: "/images/Wynns.png",
         descripcion:"Productos Wynns",

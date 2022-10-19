@@ -3,12 +3,9 @@ import { useState } from 'react';
 import './ItemCount.css';
 
 
-
-let stock = 10;
-
-function ItemCount ({onAdd}) {
+function ItemCount ({stock=0, initial=1, onAdd}) {
     
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(initial);
     
     const increase = () => {
         if (quantity < stock) {
@@ -30,7 +27,7 @@ function ItemCount ({onAdd}) {
             <p id='numero'>{quantity}</p>
             <button  className="btn btn-outline-success" onClick={increase} >+</button>
             <br />
-            <button className="btn btn-success" onClick={onAdd}>Agregar al carrito</button>
+            <button className="btn btn-success" onClick={onAdd(quantity)}>Agregar al carrito</button>
             <button className="btn btn-danger" onClick={empty}>Eliminar</button>
         </div>
     )
