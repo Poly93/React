@@ -9,7 +9,7 @@
 }
 .card__brand3{
     padding-top: 5px;
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -37,7 +37,7 @@
 }
 
 #descripcion{
-    margin-top: 5px;
+    margin-top: 2px;
     font-size: 1rem;
 }
 

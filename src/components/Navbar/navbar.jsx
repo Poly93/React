@@ -16,7 +16,7 @@ function Navbar(){
                 <Link to={'/category/Productos'}><button id='btnNavbar' className="btn btn-outline-secondary ">Productos</button></Link>
                 <Link to={'/category/Servicios'}><button id='btnNavbar' className="btn btn-outline-secondary">Servicios</button></Link>
                 <Link to={'/contact/'}><button id='btnNavbar' className="btn btn-outline-secondary">Contacto</button></Link>
-                <button id='btnNavbar' className="btn btn-outline-secondary"><Cartwidget/></button> 
+                <Link to={'/Cart'}><button id='btnNavbar' className="btn btn-outline-secondary"><Cartwidget/></button></Link> 
               </ul>
           </nav>
         

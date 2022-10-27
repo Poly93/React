@@ -1,8 +1,21 @@
 #contador{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
+    justify-content: center;
+}
+
+.Space{
+    margin: auto;
+}
+
+#Space2{
+    border: 0;
+    background-color: #ffc10730;
+    margin-top: 20px;
+}
+
+#Space2:hover{
+    background-color: #ffc10799;
 }
 
 #numero {

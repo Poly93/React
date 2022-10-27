@@ -28,11 +28,13 @@ const ItemListContainer = ({ greeting }) => {
         }, [category])
 
     if (loading) {
+
         return (
             <div className='spinner'>
                 <SpinnerDotted size={100} thickness={79} speed={100} color="rgba(245, 82, 57, 1)" />
             </div>)
     }
+    
     return (
         <div>
             <h1 className='titulo'>{greeting}</h1>
