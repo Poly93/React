@@ -1,5 +1,8 @@
 import { useEffect } from "react"
 import { useState, createContext } from "react"
+import Swal from "sweetalert2"
+
+
 
 export const CartContext = createContext({
     cart: [],
@@ -30,9 +33,32 @@ export const CartProvider = ({children}) => {
     const isInCart = (id) => {
         return cart.some(prod => prod.id === id)
     }
+
     const removeItem = (id) => {
         const cartEmpty = cart.filter(prod => prod.id !== id)
         setCart(cartEmpty)
+        }
+    
+    const showAlertRemove = (id) => {
+        Swal.fire({
+            html: 'Estas seguro que quieres eliminar el Producto?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar', 
+            confirmButtonText: 'Confirmar'
+        }).then((response) => {
+            if (response.isConfirmed) {
+                    Swal.fire(
+                    'Eliminado!',
+                    'Su producto ah sido eliminado.',
+                    'success'
+                    )
+                    removeItem(id);
+                    
+            }
+        })
     }
 
     const getQuantity = () => {
@@ -56,7 +82,7 @@ export const CartProvider = ({children}) => {
     }
 
     return(
-        <CartContext.Provider value={{ cart, addItem, removeItem, isInCart,  totalQuantity, getTotal, clearCart}}>
+        <CartContext.Provider value={{ cart, addItem, showAlertRemove,removeItem, isInCart,  totalQuantity, getTotal, clearCart}}>
             {children}
         </CartContext.Provider>
     )

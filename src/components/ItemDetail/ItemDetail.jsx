@@ -1,27 +1,28 @@
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
-import swal from 'sweetalert';
+import withReactContent from 'sweetalert2-react-content';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
+import Swal from 'sweetalert2';
 
 
-export const showAlert = () => {
-  swal({
-    title:'Producto Agregado',
-    text:'Su producto se encuentra en el Carrito',
-    icon:'success',
-    button:'Continuar comprando',
-  });
-}
 
 const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) => {
 
     const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
-      const productToAdd = {id, precio, category, quantity}
-        showAlert();
+      const productToAdd = {id, img, titulo, precio, category, quantity}
+        const showingAlert = withReactContent(Swal)
+        showingAlert.fire({
+        position: 'center',
+        icon: 'success',
+        title: <strong>Producto Agregado!</strong>,
+        html: <i>Su producto se encuentra en el Carrito</i>,
+        showConfirmButton: false,
+        timer: 1600
+      })
         addItem(productToAdd)
 }
 
