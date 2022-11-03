@@ -35,7 +35,7 @@ const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) =
                 <p id='descripcion'>{descripcion}</p>
                 <p id='stock'>Stock: {stock} unidades</p>
 
-              <ItemCount onAdd={handleOnAdd} stock={stock}/>
+                { stock !== 0 ? <ItemCount onAdd={handleOnAdd} stock={stock}/> : <p>Sin Stock.</p>}
               
               <div className="card__brand3">
                 <Link className='links' to={'/'} ><p id='descripcion'>Listado de Productos</p></Link>

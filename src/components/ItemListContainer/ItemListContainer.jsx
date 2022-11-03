@@ -5,7 +5,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom'
 import { SpinnerDotted } from 'spinners-react';
 import { getDocs, collection, query, where } from 'firebase/firestore'
-import { db } from '../../services/firebase/index'
+import { db } from '../../services';
 
 
 const ItemListContainer = ({ greeting }) => { 

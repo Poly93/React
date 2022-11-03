@@ -1,0 +1,10 @@
+.anchoModif-form {
+    width: 40%;
+    margin: 0 auto; 
+}
+
+.formColor-modif{
+    background-color: #ffffff40;
+    border: 1px #ffffff50 solid;
+    transition: border-color 6s ease-in-out,box-shadow 1s ease-in-out;
+}

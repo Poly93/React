@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { SpinnerDotted } from 'spinners-react';
 import "./ItemDetailContainer.css";
 import { getDoc, doc } from 'firebase/firestore';
-import { db } from '../../services/firebase/index';
+import { db } from '../../services';
 
 
 const ItemDetailContainer = () => {
