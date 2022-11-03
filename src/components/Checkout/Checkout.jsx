@@ -141,13 +141,12 @@ const Checkout = () => {
                                         <div  key={prod.id}>
                                             <li>{prod.titulo}</li>
                                             <li> {prod.quantity}</li>
-                                            <p className='break'>----------------------------------------</p>
                                         </div>
                                     )
                                 })}
                                 </li>
-                                <li className='myFormli'>Cantidad de productos: {totalQuantity}</li>
-                                <li className='myFormli'>Total: ${getTotal(cart)} </li>
+                                <li>Cantidad de productos: {totalQuantity}</li>
+                                <li>Total: ${getTotal(cart)} </li>
                             </ul>
                         </div>
                     </form>
