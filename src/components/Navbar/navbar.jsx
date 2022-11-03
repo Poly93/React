@@ -1,7 +1,7 @@
 import logo from "../../assets/logo.png";
 import './navbar.css';
-import '../Cartwidget/cartWidget'
-import Cartwidget from "../Cartwidget/cartWidget";
+import '../Cartwidgt/cartWidget'
+import Cartwidget from "../Cartwidgt/cartWidget";
 import { Link } from 'react-router-dom';
 
 
