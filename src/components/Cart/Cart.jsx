@@ -33,14 +33,14 @@ return(
     <div>
         <div id="contBuying">
             <p id="title">Tus Productos</p>
-            <Link to={'/category/Productos'}><button className='Space btn btn-primary'>Continuar comprando</button></Link>
+            <Link to={'/'}><button className='Space btn btn-primary'>Continuar comprando</button></Link>
         </div>
         {cart.map(prod => (
             <div className="card__brand__cart" key={prod.id}>
                 <div className="in__card__cart">
                     <img id='img__cart' src={prod.img} alt="Producto"/>
                     <p id="descrip__cart">Cantidad: {prod.quantity}</p>
-                    <p id="descrip__cart">Subtotal: $ {prod.precio * prod.quantity * 1000}</p>
+                    <p id="descrip__cart">Subtotal: $ {prod.precio * prod.quantity}</p>
                     <button className='Space btn btn-danger' onClick={() => showAlertRemove(prod.id)}>Eliminar Producto</button>
                 </div>
             </div>

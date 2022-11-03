@@ -3,7 +3,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns: 3fr auto;
-    gap: 10px;
+    gap: 20px;
 }
 
 .btnGridPos{
@@ -21,12 +21,18 @@ p{
 }
 
 .card__brand{
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 30px;
     background-color: #2c3e5050;
+    transition: all 2s;
+    overflow: hidden;
+}
+
+.card__brand:hover{
+    translate: 10px -20px;
 }
 
 #img{
@@ -37,7 +43,7 @@ p{
 #card:hover{box-shadow: 79px 17px 53px 3px rgba(0,0,0,0.73);
     -moz-box-shadow: 79px 17px 53px 3px rgba(0,0,0,0.73);
     box-shadow: 79px 17px 53px 3px rgba(0,0,0,0.73);
-    transition: 2s;
+    transition: all 2s;
 }
 
 #botonc{
@@ -46,5 +52,5 @@ p{
 }
 #botonc:hover{
     background-color:#f55239 ;
-    transition: 2s;
+    transition: all 2s;
 }

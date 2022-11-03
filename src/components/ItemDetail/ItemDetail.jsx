@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 
 
 const ItemDetail = ({ id, titulo, precio, img, descripcion, category, stock }) => {
-
     const { addItem } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {

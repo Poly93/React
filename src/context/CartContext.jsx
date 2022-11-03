@@ -83,7 +83,7 @@ export const CartProvider = ({children}) => {
     const getTotal = () => {
         let Counter = 0
         cart.forEach(prod => {
-            Counter += (prod.quantity * prod.precio * 1000)
+            Counter += (prod.quantity * prod.precio)
         })
         return Counter;
 

@@ -1,24 +1,26 @@
-import {getProductById} from '../../asyncMock';
 import ItemDetail from '../ItemDetail/ItemDetail.jsx';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { SpinnerDotted } from 'spinners-react';
 import "./ItemDetailContainer.css";
+import { getDoc, doc } from 'firebase/firestore';
+import { db } from '../../services/firebase/index';
 
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-
     const {productId} = useParams()
 
     useEffect(() => {
-        getProductById(productId).then(response => {
-            setProducts(response)
-        }).finally(() => {
-            setLoading(false)
-        })
+            const docRefDb = doc(db, 'products', productId)
+            getDoc(docRefDb).then(response =>{
+                const data = response.data()
+                const productAdapted = { id: response.id, ...data}
+                setProducts(productAdapted)
+            }).finally(() => {
+                setLoading(false)
+            })
     }, [productId])
 
     if (loading) {
