@@ -4,7 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext'
 import { Cart } from './components/Cart/Cart.jsx'
-import { Checkout } from './components/CheckOut/Checkout.jsx';
+import Checkout  from './components/CheckOut/Checkout';
 
 
 function App(){
