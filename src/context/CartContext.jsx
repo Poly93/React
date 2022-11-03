@@ -26,7 +26,18 @@ export const CartProvider = ({children}) => {
         if(!isInCart(productToAdd.id)) {
         setCart([...cart, productToAdd])
         } else {
-            console.log('producto ya agregado.')
+            Swal.fire({
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                title: 'El Producto ya se encuentra en el carrito',
+                html: 'Elimine el producto de su carrito, para cambiar la cantidad.',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            })
         }
     }
 
@@ -82,7 +93,7 @@ export const CartProvider = ({children}) => {
     }
 
     return(
-        <CartContext.Provider value={{ cart, addItem, showAlertRemove,removeItem, isInCart,  totalQuantity, getTotal, clearCart}}>
+        <CartContext.Provider value={{ cart, addItem, showAlertRemove,removeItem, isInCart, totalQuantity, getTotal, clearCart}}>
             {children}
         </CartContext.Provider>
     )

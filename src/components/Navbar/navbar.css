@@ -26,3 +26,12 @@
     border-radius: 3px;
 }
 
+@media screen and (max-width: 420px) {
+    .navegador{
+        min-width: 60%;
+        background-color: white;
+    }
+    .banner_logo{
+        min-width: 30%;  
+    }
+}

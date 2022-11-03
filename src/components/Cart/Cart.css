@@ -49,3 +49,25 @@
     text-align: center;
     border-radius: 20px;
 }
+.cartEmpty{
+    text-align: center;
+    margin: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #2c3e5020;
+}
+
+@media screen and (max-width: 420px){
+    #img__cart{
+        max-width: 80%;
+    }
+    .in__card__cart{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
+    

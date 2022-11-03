@@ -9,13 +9,12 @@ function Navbar(){
     return(
       <div>
         <header className="banner_logo">
-        <Link to={'/'} ><img src={logo} alt="logo" /></Link>
+        <Link to={'/'}><img src={logo} alt="logo" /></Link>
         </header>    
           <nav className="navegador">        
               <ul id="lista">
                 <Link to={'/category/Productos'}><button id='btnNavbar' className="btn btn-outline-secondary ">Productos</button></Link>
                 <Link to={'/category/Servicios'}><button id='btnNavbar' className="btn btn-outline-secondary">Servicios</button></Link>
-                <Link to={'/contact/'}><button id='btnNavbar' className="btn btn-outline-secondary">Contacto</button></Link>
                 <Link to={'/Cart'}><button id='btnNavbar' className="btn btn-outline-secondary"><Cartwidget/></button></Link> 
               </ul>
           </nav>

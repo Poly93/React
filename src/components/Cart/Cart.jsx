@@ -2,6 +2,8 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import './Cart.css';
 import { Link } from 'react-router-dom'
+import Swal from "sweetalert2";
+import withReactContent from 'sweetalert2-react-content';
 
 
 
@@ -9,6 +11,23 @@ import { Link } from 'react-router-dom'
 
 export const Cart = () => {
     const { cart, showAlertRemove, getTotal, clearCart } = useContext(CartContext)
+
+if (cart.length === 0) {
+    const showingAlert = withReactContent(Swal)
+        showingAlert.fire({
+        position: 'center',
+        icon: 'warning',
+        title: <strong>Carrito Vacio</strong>,
+        html: <i>No tiene productos en su carrito. Dirijase a la tienda.</i>,
+        showConfirmButton: true
+        })
+    return(
+        <div className="cartEmpty">
+            <h1 id="title">Su Carrito esta Vacio</h1>
+            <Link to={'/'}><button className='btn btn-primary'>Nuestros Productos y Servicios</button></Link>
+        </div>
+    )
+}    
 
 return(
     <div>
@@ -31,7 +50,7 @@ return(
         </div>
         <div className="GenerateBtn">
             <p>Total: $ {getTotal(cart)}</p>
-            <button className='Space btn btn-outline-dark'>Generar orden de compra</button>
+            <Link to={'/Checkout'}><button className='Space btn btn-outline-dark'>Generar orden de compra</button></Link>
         </div>
     </div>
 )
