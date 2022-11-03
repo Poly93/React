@@ -38,10 +38,14 @@
     margin: 3% auto;
     text-align: center;
 }
-.clearBtn{
-    margin: 3% auto;
+
+.marginsBtns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
 }
+
 .GenerateBtn{
     background-color: #2c3e5040;
     padding: 20px;

@@ -29,7 +29,7 @@ const Checkout = () => {
 
         if (!name && !phone && !email) {
             Swal.fire(
-                'Campos requeridos incompletos.',
+                'Campos requeridos incompletos!',
                 'Porfavor complete los campos con sus datos para generar la orden de compra.',
                 'question'
             )
@@ -43,7 +43,8 @@ const Checkout = () => {
                 },
                 Productos: cart.map(product => ({
                     id: product.id, 
-                    titulo: product.titulo, 
+                    titulo: product.titulo,
+                    img: product.img, 
                     cantidad: product.quantity })),
                     total: getTotal(cart)
             }
@@ -75,7 +76,7 @@ const Checkout = () => {
                 const orderGenerated = await addDoc(ordersCollection, order)
                 Swal.fire({
                     title:'Muchas gracias por su compra!.',
-                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: ${orderGenerated.id}`,
+                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: <i><b>${orderGenerated.id}.</b></i>`,
                     icon:'success'
                 })
                 clearCart(cart)
@@ -102,51 +103,56 @@ const Checkout = () => {
 
         return (
             <div>
-                <h1>Completa los datos para generar la orden.</h1>
-                    <form className="myForm">
+                <div className='titleOrder'>
+                    <h1>Completa los datos para generar la orden</h1>
+                </div>
+                <div className='formOrder'>
+                    <form className="">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control formColor-modif anchoModif-form" id="email" value={name} onChange={(e) => setName(e.target.value)}/>
+                            <input type="text" class="form-control formColor-modif" id="email" value={name} onChange={(e) => setName(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-                            <input type="number" class="form-control formColor-modif anchoModif-form" id="email" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                            <input type="text" class="form-control formColor-modif" id="email" value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control formColor-modif anchoModif-form" id="email" placeholder="suCorreo@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input type="email" class="form-control formColor-modif" id="email" placeholder="suCorreo@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Confirmar Email</label>
-                            <input type="email" class="form-control formColor-modif anchoModif-form" id="email" placeholder="suCorreoConfirmado@example.com" value={emailConfirm}  onChange={(e) => setEmailConfirm(e.target.value)}/>
+                            <input type="email" class="form-control formColor-modif" id="email" placeholder="suCorreoConfirmado@example.com" value={emailConfirm}  onChange={(e) => setEmailConfirm(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Comentario adicional</label>
-                            <textarea class="form-control formColor-modif anchoModif-form" id="message" rows="5" value={coments} onChange={(e) => setComents(e.target.value)}></textarea>
+                            <textarea class="form-control formColor-modif" id="message" rows="5" value={coments} onChange={(e) => setComents(e.target.value)}></textarea>
                         </div>
-                        <div>
+                        <div className='btnBuy'>
                         { email === emailConfirm ?
                         <button type="button" class="btn btn-outline-dark" onClick={createOrder}>Comprar</button>
                         :
-                        <button type="button" class="btn btn-outline-dark" onClick={eValidate}>Por favor, verifique que los emails coincidan. </button>
+                        <button type="button" class="btn btn-outline-dark" onClick={eValidate}>Por favor, verifique que los emails coincidan</button>
                         }
                         </div>
-                        <div >
-                            <h2>Su Pedido:</h2>
-                            <div> 
-                                {cart.map(prod => {
-                                    return (
-                                        <div  key={prod.id}>
-                                            <p>{prod.titulo}</p>
-                                            <p> {prod.quantity}</p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                                <p>Cantidad de productos: {totalQuantity}</p>
-                                <p>Total: ${getTotal(cart)} </p>
-                        </div>
                     </form>
+                </div>
+                <div className='detailOrder'>
+                    <h2>Resumen de compra</h2>
+                    <br/>
+                    {cart.map(prod => {
+                        return (
+                            <div className='orderCheckout' key={prod.id}>
+                                <img id='imgCheckout' alt='imagen' src={prod.img}/>
+                                <p id='sizePorder'>{prod.titulo}</p>
+                                <p id='sizePorder'>{prod.quantity}</p>
+                                <p id='sizePorder'>${prod.precio}</p>
+                            </div>
+                        )
+                    })}
+                    <p id='sizePorder2'>Cantidad de productos: {totalQuantity}</p>
+                    <p id='sizePorder2'>Total: ${getTotal(cart)} </p>
+                </div>
             </div>
         )
 }   

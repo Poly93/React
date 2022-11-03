@@ -33,8 +33,12 @@ return(
     <div>
         <div id="contBuying">
             <p id="title">Tus Productos</p>
-            <Link to={'/'}><button className='Space btn btn-primary'>Continuar comprando</button></Link>
         </div>
+            <div className="marginsBtns">
+                <Link to={'/'}><button className='Space btn btn-primary'>Continuar comprando</button></Link>
+                <button className='Space btn btn-primary'  onClick={() => clearCart(cart)}>Vaciar Carrito</button>
+            </div>
+        
         {cart.map(prod => (
             <div className="card__brand__cart" key={prod.id}>
                 <div className="in__card__cart">
@@ -45,9 +49,7 @@ return(
                 </div>
             </div>
         ))}
-        <div className="clearBtn">
-            <button className='Space btn btn-primary'  onClick={() => clearCart(cart)}>Vaciar Carrito</button>
-        </div>
+        
         <div className="GenerateBtn">
             <p>Total: $ {getTotal(cart)}</p>
             <Link to={'/Checkout'}><button className='Space btn btn-outline-dark'>Generar orden de compra</button></Link>
