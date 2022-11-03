@@ -1,12 +1,11 @@
-import React from 'react';
 import './Checkout.css';
-import { useState, useContext } from 'React';
+import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import Swal from 'sweetalert2';
 import { SpinnerDotted } from 'spinners-react/lib/esm/SpinnerDotted';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { addDoc, collection, getDocs, query, where, writeBatch, documentId } from 'firebase/firestore'
-import { db } from '../../services/index.js'
+import { db } from '../../services/index'
 
 
 const Checkout = () => {
@@ -18,6 +17,7 @@ const Checkout = () => {
     const [email, setEmail] = useState('')
     const [emailConfirm, setEmailConfirm] = useState('')
     const [coments, setComents] = useState('')
+    const navigate = useNavigate()
     
     const eValidate = (e) => {
         e.preventDefault()
@@ -41,7 +41,7 @@ const Checkout = () => {
                     email: email,
                     comentarios: coments,
                 },
-                productos: cart.map(product => ({
+                Productos: cart.map(product => ({
                     id: product.id, 
                     titulo: product.titulo, 
                     cantidad: product.quantity })),
@@ -57,7 +57,7 @@ const Checkout = () => {
 
             docs.forEach(doc => {
                 const dataDoc = doc.data()
-                const stockDb = dataDoc.stockDb
+                const stockDb = dataDoc.stock
                 const productAddedtoCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = productAddedtoCart?.quantity
 
@@ -75,13 +75,13 @@ const Checkout = () => {
                 const orderGenerated = await addDoc(ordersCollection, order)
                 Swal.fire({
                     title:'Muchas gracias por su compra!.',
-                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: ${orderGenerated}`,
+                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: ${orderGenerated.id}`,
                     icon:'success'
                 })
                 clearCart(cart)
                 setTimeout(() => {
-                    Navigate('/')
-                },3000)
+                    navigate('/')
+                },2000)
             } else {
                 Swal.fire({
                     title: 'Producto fuera de Stock.',
@@ -92,14 +92,13 @@ const Checkout = () => {
             }
             setLoading(false)
         }
-    }
-
         if (loading) {
             return (
                 <div className='spinner'>
                     <SpinnerDotted size={100} thickness={79} speed={100} color="rgba(245, 82, 57, 1)" />
                 </div>)
         }
+    }
 
         return (
             <div>
@@ -127,27 +126,25 @@ const Checkout = () => {
                         </div>
                         <div>
                         { email === emailConfirm ?
-                        <button type="button" class="btn btn-outline-dark" onClick={createOrder}>Generar orden de compra</button>
+                        <button type="button" class="btn btn-outline-dark" onClick={createOrder}>Comprar</button>
                         :
                         <button type="button" class="btn btn-outline-dark" onClick={eValidate}>Por favor, verifique que los emails coincidan. </button>
                         }
                         </div>
                         <div >
                             <h2>Su Pedido:</h2>
-                            <ul>
-                                <li>
+                            <div> 
                                 {cart.map(prod => {
                                     return (
                                         <div  key={prod.id}>
-                                            <li>{prod.titulo}</li>
-                                            <li> {prod.quantity}</li>
+                                            <p>{prod.titulo}</p>
+                                            <p> {prod.quantity}</p>
                                         </div>
                                     )
                                 })}
-                                </li>
-                                <li>Cantidad de productos: {totalQuantity}</li>
-                                <li>Total: ${getTotal(cart)} </li>
-                            </ul>
+                            </div>
+                                <p>Cantidad de productos: {totalQuantity}</p>
+                                <p>Total: ${getTotal(cart)} </p>
                         </div>
                     </form>
             </div>
