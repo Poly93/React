@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAnkxtg59lNU6PSYjEmKYvJLS6vKOvHlxc",
-    authDomain: "lubricentro-stocco.firebaseapp.com",
-    projectId: "lubricentro-stocco",
-    storageBucket: "lubricentro-stocco.appspot.com",
-    messagingSenderId: "585751419365",
-    appId: "1:585751419365:web:deeed9129ca5149fb8370c"
+    apiKey: "process.env.REACT_APP_apiKey",
+    authDomain: "process.env.REACT_APP_authDomain",
+    projectId: "process.env.REACT_APP_projectId",
+    storageBucket: "process.env.REACT_APP_storageBucket",
+    messagingSenderId: "process.env.REACT_APP_messagingSenderId",
+    appId: "process.env.REACT_APP_appId"
 };
 
 const app = initializeApp(firebaseConfig);
