@@ -76,7 +76,7 @@ const Checkout = () => {
                 const orderGenerated = await addDoc(ordersCollection, order)
                 Swal.fire({
                     title:'Muchas gracias por su compra!.',
-                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: <i><b>${orderGenerated.id}.</b></i>`,
+                    html: `En breve, un asesor se estara comunicando con usted. Su numero de orden es: <i><b>${orderGenerated.id}</b></i>`,
                     icon:'success'
                 })
                 clearCart(cart)
