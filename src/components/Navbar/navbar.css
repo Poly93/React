@@ -1,9 +1,12 @@
 .navegador{
+    max-width: 100%;
     background-color: white;
     margin-top: 0;
+    min-width: 20%;
 }
 
 .banner_logo{
+    /* max-width: 100%; */
     background-color: white;
     text-align: center;
 }

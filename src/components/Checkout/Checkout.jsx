@@ -110,19 +110,19 @@ const Checkout = () => {
                     <form className="">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control formColor-modif" id="email" value={name} onChange={(e) => setName(e.target.value)}/>
+                            <input type="text" class="form-control formColor-modif" value={name} onChange={(e) => setName(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Telefono</label>
-                            <input type="text" class="form-control formColor-modif" id="email" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                            <input type="tel" name="phone" placeholder="12-3456-7890" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" required class="form-control formColor-modif" value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control formColor-modif" id="email" placeholder="suCorreo@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input type="email" class="form-control formColor-modif" placeholder="suCorreo@example.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Confirmar Email</label>
-                            <input type="email" class="form-control formColor-modif" id="email" placeholder="suCorreoConfirmado@example.com" value={emailConfirm}  onChange={(e) => setEmailConfirm(e.target.value)}/>
+                            <input type="email" class="form-control formColor-modif" placeholder="suCorreoConfirmado@example.com" value={emailConfirm}  onChange={(e) => setEmailConfirm(e.target.value)}/>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Comentario adicional</label>
