@@ -9,7 +9,7 @@ function Navbar(){
     return(
       <div>
         <header className="banner_logo">
-        <Link to={'/'}><img src={logo} alt="logo" /></Link>
+        <Link to={'/'}><img id='imgBannerLogo' src={logo} alt="logo" /></Link>
         </header>    
           <nav className="navegador">        
               <ul id="lista">

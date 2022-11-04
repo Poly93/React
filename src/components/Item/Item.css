@@ -1,6 +1,6 @@
 .grilla__lubricentro{
     margin: 10px auto;
-    max-width: 1200px;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 3fr auto;
     gap: 20px;
