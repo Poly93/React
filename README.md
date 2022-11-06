@@ -2,7 +2,7 @@
 >                            Full-Stack Developer
 ## _E-Commerce - Lubricentro Stocco_
 
-This website is powered by React, HTML5, Firebase, Bootstrap and is mobile-ready too.
+This website is powered by React, HTML5, Firebase, Bootstrap, SweetAlert2 and is mobile-ready too.
 
 ## Installation
 
