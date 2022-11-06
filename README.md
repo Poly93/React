@@ -16,7 +16,8 @@ $ npm i firebase
 $ npm i react-router-dom
 $ npm start
 ```
-
+## Environment Variables
+See .env.example for an example.
 
 ## Production Deployment
 
